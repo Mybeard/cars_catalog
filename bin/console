@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+
+$camaro = new \App\Car("Chevy", 2000, "Camaro", "US123454awd54C", "Full");
+
+$magnum = new \App\Truck("Reno", 2016, "Magnum", "FR51658432FJHn534", 20);
+
+$catalog = new \App\Catalog();
+
+$catalog->setCarCatalog($camaro);
+$catalog->setCarCatalog($magnum);
+$catalog->print_catalog();
+
